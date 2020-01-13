@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main2.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>span.stars, span.stars span {
+    display: block;
+    background: url(stars.png) 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
+}
+
+span.stars span {
+    background-position: 0 0;
+}
+</style>
+
+        <title>Hospital</title>
+    
+        <h2 style="color:#4272d7; font-size:50px;margin-left: 580;margin-top: 100px;margin-left: 500px;margin-bottom: 38px;font-family: 'Times New Roman';font-weight: bolder;">Hospital Finder</h2>
+  <!--<h2 style="color:#4272d7; font-size:30px;margin-left: 500px;margin-top: 80px;margin-bottom: 28px;">Hospital Finder</h2>-->
+    
+</head>
+<body>
+  
+   <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-light bg-blue fixed-top">
+          <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggle">
+              <div class="navbar-nav mr-auto">
+               <!--<a class="nav-item nav-link" href="/">Home</a>
+                <a class="nav-item nav-link" href="/about">About</a>-->
+              </div>
+              <!-- Navbar Right Side -->
+              <div class="navbar-nav">
+                 <!--<a class="nav-item nav-link" href="/login">Login</a>
+                <a class="nav-item nav-link" href="/register">Register</a>-->
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main role="main" class="container">
+        <div class="row">
+          <div class="col-md-8">
+              <ul class="list-group">
+                  {% block content %}{% endblock %}</ul>
+                      </div>
+                <div class="col-md-4">
+            <div class="content-section">
+              <h3></h3>
+              <!--<p class='text-muted'> information you'd like.-->
+                <!--<ul class="list-group">
+                  <li class="list-group-item list-group-item-light">info1</li>
+                  <li class="list-group-item list-group-item-light">info2</li>
+                  <li class="list-group-item list-group-item-light">info3</li>
+                  <li class="list-group-item list-group-item-light">info4</li>
+                </ul>-->
+                <iframe src="https://www.google.com/maps/d/embed?mid=1sefk7qUj76PhNEMm2zjaZ6DAqaF3DkKn" width="300" height="320"></iframe>
+                
+              <!--</p>-->
+            </div>
+          </div>
+        </div>
+      </main>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+
+
+

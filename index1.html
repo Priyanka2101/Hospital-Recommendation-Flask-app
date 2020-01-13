@@ -1,0 +1,78 @@
+{% extends 'base1.html' %}
+
+{% block head %}
+<h2 style="color:#4272d7; font-size:50px;margin-left: 630;margin-top: 100px;">Hospigo</h2>{% endblock %}
+
+{% block body %}
+
+<div class="s01">
+<form method="POST" action="/search">
+<div class="inner-form" align="left">
+<!--<div class="input-field first-wrap">-->
+<!--<input id="search" type="text" placeholder="select the symptoms" name="zip"/>-->
+<!--</div>-->
+<div class="input-field second-wrap" >
+<!--<input id="location" type="text" placeholder="distance(km)" name="radius" />-->
+<div class="multiselect">
+    
+<div class="selectBox" onclick="showCheckboxes()">
+
+    <select style="writing-mode: horizontal-tb;width: 950px;height:70px;margin-left: -5px;">
+    <option style="font-weight:lighter; width: 550px;height:150px;color: #4272d7;">Select your symptoms</option>
+</select>
+
+<div class="overSelect"></div>
+</div>
+
+<div id="checkboxes">
+    <!--<label for="one" style="block-size: 2%;"><input type="checkbox" id="one" />first check box sldkfjghdkjfg</label></br> 
+    <label for="one"><input type="checkbox" id="one"  />first check box</label></br>  
+    <label for="one"><input type="checkbox" id="one" />first check box</label></br>  
+    <label for="one"><input type="checkbox" id="one" />first check box</label></br>  -->
+    {% for symp in symptoms %}
+    <label class="container">{{symp}}
+            <input type="checkbox" name = "users" value="{{symp}}">
+            <span class="checkmark"></span>
+          </label>
+          {% endfor %}
+        
+</div>
+</div>
+
+</div>
+
+<div class="input-field third-wrap">
+<button class="btn-search" type="submit" href="{{url_for('fly')}}">Search</button>
+<!--<a href="{{url_for('fly')}}" class="btn" style="margin-left: 650px;margin-top: 110px;">Start Search</a>-->
+</div>        
+</div>
+</form>
+</div>
+<script>
+var expanded=false;
+function showCheckboxes(){
+    var checkboxes=document.getElementById("checkboxes");
+    if (!expanded){
+
+        checkboxes.style.display="block";
+        expanded=true;
+    }else{
+
+        checkboxes.style.display="none";
+        expanded=false;
+    }
+}    
+    
+   
+
+
+
+
+</script>
+       {% for i in selected_users %}
+       <p>{{i}}</p>
+{% endfor%}
+{% endblock %}
+<!--<input class="btn btn-primary" type="submit" value="submit">-->
+<!--<a style="color:white;background-color: rgba(0, 0, 0, 0.01);text-align:center;font-size:55px;font-family: Georgi;" href="{{url_for('fly')}}">Submit</a>
+-->

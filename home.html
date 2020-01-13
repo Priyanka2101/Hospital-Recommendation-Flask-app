@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block content %}
+
+  <p style="margin-left: 285px;font-size: 25px;color:darkkhaki;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">You might be having {{disease[0]}}</p>
+
+       
+    {% for post in result5 %}
+    
+    
+        <article class="media content-section">
+           <!-- <div class="col-lg-4">-->
+           <div class="media-body">
+            <div class="article-metadata">
+            <a class="mr-2" style="font-size:25px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" href="{{post.website}}">{{ post.hname }}</a><br><!--<small class="text-muted">{{ post.hname }}</small>-->
+            <br> <p><b> Specilties   </b>   {{post.specilties}}</p>
+             <p><b> Health Insurance   </b>   {{post.insurance}} </p>
+             <p><b> Address</b>    {{post.htype}}      {{post.hadd}}</p>
+            <p><b> Ratings   </b>   {{ post.ratings }}</p>
+            <p><b> Distance   </b>  {{ post.dist|round(1,'ceil')}} km</p>
+            <p><b> Phone   </b>      {{ post.telephone }}</p>
+           
+      <!--  </div>
+            </div>
+           
+            </div>-->
+            
+                </article>
+       
+           
+        {% endfor %}
+    
+    
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+                
+         
